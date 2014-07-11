@@ -52,7 +52,7 @@ var BufferedActiveModelAdapter = DS.ActiveModelAdapter.extend({
             // } else {
             found_json = json_data.filter(function(item) {return item.id == id;});
             Ember.assert('Should get json with id: ' + id, found_json);
-            obj[jsonKey] = found_json;
+            obj[jsonKey] = found_json[0];
             // }
             return obj;
         }, null);
